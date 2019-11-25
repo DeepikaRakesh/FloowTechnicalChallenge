@@ -1,9 +1,7 @@
 package wordOccurance;
 
-import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
 import com.mongodb.MapReduceCommand;
 import com.mongodb.MongoClient;
 
@@ -32,11 +30,11 @@ public class WordCount_MapReduceExample {
 			
 			// read Map file
 
-			String map = readFile("wc_map.js");
+			String map = readFile("WordCount_Map.js");
 
 			// read Reduce file
 
-			String reduce = readFile("wc_reduce.js");
+			String reduce = readFile("WordCount_Reduce.js");
 
 			// execute MapReduce on the input collection and direct the result to
 			// "wordcounts" collection
@@ -51,6 +49,7 @@ public class WordCount_MapReduceExample {
 	 * Reads the specified file from classpath
 	 */
 	private static String readFile(String fileName) throws IOException {
+		
 		// get the input stream
 
 		InputStream fileStream = WordCount_MapReduceExample.class.getResourceAsStream("/" + fileName);
