@@ -40,6 +40,8 @@ Step 7 : Close the resources.
 
 Since Map.Entry doesn't implement the Comparable interface, I wrote a custom Comparator to sort the entries and I am comparing entries on their values.
 
+We can either run it as a Java Application from the eclipse, or run in the terminal by using javac and java commands.
+
 With a large file, program will run out of memory and throw java.lang.OutOfMemory: Java Heap space. One solution for this is to do this task in chunk e.g. first read 20% content, find maximum repeated word on that, then read next 20% content and find repeated maximum by taking the previous maximum in consideration. 
 In this way, we don't need to store all words in the memory and can process any arbitrary length file.
 
