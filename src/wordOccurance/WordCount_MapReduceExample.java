@@ -20,7 +20,7 @@ public class WordCount_MapReduceExample {
 
 			mongoClient.dropDatabase("sampleMongoDB");
 
-			// access the db named "samplesampleMongoDB"
+			// access the db named "sampleMongoDB"
 
 			DB db = mongoClient.getDB("sampleMongoDB");
 			
